@@ -4,6 +4,9 @@ calculator.py
 
 One function per operation, in order.
 """
+# https://github.com/micaela-mejia/lab11-MM-VC
+# Partner 1: Micaela Mejia
+# Partner 2: Victor Corona
 
 import math
 
@@ -24,7 +27,7 @@ def hypotenuse(a, b): #can have negative nums
 def add(a,b):
     return a + b
 
-def sub(a,b):
+def subtract(a,b):
     return a-b
 
 def mul(a, b):
@@ -35,7 +38,7 @@ def div(a,b):
         raise ZeroDivisionError("Cannot divide by 0!")
     else:
         return b/a
-def log(a, b):
+def logarithm(a, b):
     if b <= 0:
         raise ValueError("Logarithm argument must be positive!")
     elif a <= 0 or a == 1:
