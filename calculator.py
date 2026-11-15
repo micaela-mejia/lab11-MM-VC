@@ -7,7 +7,6 @@ One function per operation, in order.
 
 import math
 
-<<<<<<< HEAD
 def square_root(a): #raise ValueError if a < 0
     try:
         if a < 0:
@@ -22,9 +21,7 @@ def hypotenuse(a, b): #can have negative nums
     except TypeError as e:
         raise e
 
-=======
 def add(a,b):
->>>>>>> afbb8fbe09f087c75ab1f5d961306d7f9b1b882b
     return a + b
 
 def sub(a,b):
