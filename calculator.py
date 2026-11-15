@@ -4,8 +4,10 @@ calculator.py
 
 One function per operation, in order.
 """
+
 import math
 
+<<<<<<< HEAD
 def square_root(a): #raise ValueError if a < 0
     try:
         if a < 0:
@@ -20,29 +22,29 @@ def hypotenuse(a, b): #can have negative nums
     except TypeError as e:
         raise e
 
-def add(a, b): 
+=======
+def add(a,b):
+>>>>>>> afbb8fbe09f087c75ab1f5d961306d7f9b1b882b
     return a + b
 
-def subtract(a,b):
-    return a - b
+def sub(a,b):
+    return a-b
 
-def multiply(a, b):
-    return a * b
+def mul(a, b):
+    return a*b
 
-def divide(a, b): #raise ZeroDivisionError if a == 0
+def div(a,b):
     if a == 0:
-        raise ZeroDivisionError("Division by zero is not allowed.")
-    return b / a
-
-def logarithm(a, b): #use math library/raise ValueError
+        raise ZeroDivisionError("Cannot divide by 0!")
+    else:
+        return b/a
+def log(a, b):
     if b <= 0:
-        raise ValueError("Logarithm argument must be postive.")
-    if a <= 0 or a == 1:
-        raise ValueError("Logarithm base must be postive and not 1.")
-    return math.loga (b)
+        raise ValueError("Logarithm argument must be positive!")
+    elif a <= 0 or a == 1:
+        raise ValueError("Base must be positive and greater than 1!")
+    else:
+        return math.log(a, b)
 
-def exponent(a, b): 
+def exp(a, b):
     return a ** b
-
-
-
