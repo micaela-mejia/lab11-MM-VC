@@ -21,7 +21,7 @@ def square_root(a): #raise ValueError if a < 0
 
 def hypotenuse(a, b): #can have negative nums
     try:
-        math.hypot(a, b)
+        return math.hypot(a, b)
     except TypeError as e:
         raise e
 
