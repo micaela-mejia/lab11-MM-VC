@@ -17,11 +17,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(sub(-5, -10),15)
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.asserEqual(mul(3, 4, 12))
+        self.asserEqual(mul(-2, 5, -10))
+        self.asserEqual(mul(0, 5, 0))
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
+    def test_divide(self): # 3 assertions
+        self.asserEqual(div(10, 2), 5.0)
+        self.asserEqual(div(-10, 2), -5.0)
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 5)
     # ##########################
 
     ######## Partner 2
@@ -38,21 +43,23 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             log(-2, 8)
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self): # 1 assertion
+        # call log function inside, example:
+        with self.assertRaises(ValueError):
+            logarithm(0, 5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
+        self.assertAlmostEqual(hypotenuse(-3, -4), 5.0)
+        self.assertAlmostEqual(hypotenuse(0, 0), 0.0)
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        # Test for invalid argument, example:
+        with self.assertRaises(ValueError):
+           square_root(-4)
+        # Test basic function
+        self.assertAlmostEqual(square_root(9), 3.0)
+        self.assertAlmostEqual(square_root(0), 0.0)
     ##########################
 
 # Do not touch this
