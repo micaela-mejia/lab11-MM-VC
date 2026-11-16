@@ -12,19 +12,19 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-1, 1), 0)
         self.assertEqual(add(-5, -10),15)
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(10, 5), 5)
-        self.assertEqual(sub(1, 1), 0)
-        self.assertEqual(sub(-5, -10),15)
+        self.assertEqual(subtract(10, 5), 5)
+        self.assertEqual(subtract(1, 1), 0)
+        self.assertEqual(subtract(-5, -10),15)
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        self.asserEqual(mul(3, 4, 12))
-        self.asserEqual(mul(-2, 5, -10))
-        self.asserEqual(mul(0, 5, 0))
+        self.assertEqual(mul(3, 4), 12)
+        self.assertEqual(mul(-2, 5), -10)
+        self.assertEqual(mul(0, 5), 0)
 
     def test_divide(self): # 3 assertions
-        self.asserEqual(div(10, 2), 5.0)
-        self.asserEqual(div(-10, 2), -5.0)
+        self.assertEqual(div(10, 2), 5.0)
+        self.assertEqual(div(-10, 2), -5.0)
         with self.assertRaises(ZeroDivisionError):
             div(0, 5)
     # ##########################
@@ -35,13 +35,13 @@ class TestCalculator(unittest.TestCase):
             div(0, 5)
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(log(2, 8), 3)
-        self.assertEqual(log(3, 81), 4)
-        self.assertEqual(log(2, 2), 1)
+        self.assertEqual(logarithm(2, 8), 3)
+        self.assertEqual(logarithm(3, 81), 4)
+        self.assertEqual(logarithm(2, 2), 1)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(-2, 8)
+            logarithm(-2, 8)
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         # call log function inside, example:
