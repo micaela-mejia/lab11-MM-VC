@@ -10,11 +10,11 @@ class TestCalculator(unittest.TestCase):
     def test_add(self):
         self.assertEqual(add(5, 5), 10)
         self.assertEqual(add(-1, 1), 0)
-        self.assertEqual(add(-5, -10),15)
+        self.assertEqual(add(-5, -10),-15)
     def test_subtract(self): # 3 assertions
         self.assertEqual(subtract(10, 5), 5)
         self.assertEqual(subtract(1, 1), 0)
-        self.assertEqual(subtract(-5, -10),15)
+        self.assertEqual(subtract(-5, -10),5)
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
@@ -23,8 +23,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(mul(0, 5), 0)
 
     def test_divide(self): # 3 assertions
-        self.assertEqual(div(10, 2), 5.0)
-        self.assertEqual(div(-10, 2), -5.0)
+        self.assertEqual(div(2, 10), 5.0)
+        self.assertEqual(div(2, -10), -5.0)
         with self.assertRaises(ZeroDivisionError):
             div(0, 5)
     # ##########################
