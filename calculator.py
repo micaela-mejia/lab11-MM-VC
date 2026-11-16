@@ -1,12 +1,13 @@
+# https://github.com/micaela-mejia/lab11-MM-VC
+# Partner 1: Micaela Mejia
+# Partner 2: Victor Corona
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
 
 One function per operation, in order.
 """
-# https://github.com/micaela-mejia/lab11-MM-VC
-# Partner 1: Micaela Mejia
-# Partner 2: Victor Corona
 
 import math
 
